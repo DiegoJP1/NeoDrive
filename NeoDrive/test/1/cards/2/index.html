@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjetas Cybertruck</title>
+<style>
+
+    
+    .card {
+        width: 1000px; /* Ajustar el ancho de la tarjeta */
+        height: 400px; /* Ajustar la altura de la tarjeta */
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        margin: 20px auto;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        display: flex;
+        background: linear-gradient(135deg, #191919 0%, #000 100%);
+    }
+    
+    .card-video-container {
+        width: 70%; /* Ajustar el ancho del contenedor de video */
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .card-text {
+        width: 40%; /* Ajustar el ancho del texto */
+        padding: 20px;
+        color: #fff;
+    }
+    
+    .card-text h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #29b6f6;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .card-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+        z-index: 1;
+    }
+    
+    .glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0) 70%);
+        border-radius: 50%;
+        animation: pulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0.7;
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.9;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0.7;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="card-video-container">
+        <video class="card-video" autoplay loop muted>
+            <source src="https://res.cloudinary.com/dm2uezxs1/video/upload/v1712356917/nf4uiwlbqxyaq9zwv6fc.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="glow"></div>
+    </div>
+    <div class="card-text">
+        <h2>HECHO PARA CUALQUIER PLANETA</h2>
+        <p>LO SUFICIENTEMENTE DURADERO Y RESISTENTE PARA IR A CUALQUIER PARTE. ATACA CUALQUIER CAMINO CON UNA SUSPENSIÓN NEUMÁTICA QUE SE ADAPTA ELECTRÓNICAMENTE, TIENE 305 MM DE RECORRIDO Y 406 MM DE ALTURA LIBRE SOBRE EL SUELO.</p>
+    </div>
+</div>
+</body>
+</html>
